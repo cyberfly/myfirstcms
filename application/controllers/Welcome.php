@@ -20,10 +20,7 @@ class Welcome extends Admin_Controller {
 	 */
 	public function index()
 	{
-		$this->data['records'] = 'ahmad';
 		$this->render();
-
-		// $this->load->view('templates/frontend/index');
 	}
 
 	public function admin()
