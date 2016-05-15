@@ -20,8 +20,9 @@ class Welcome extends Admin_Controller {
 	 */
 	public function index()
 	{
-		// $this->data['content'] = 'user/add_user';
 		$this->render();
+		//to load content layout, use this format
+		//$this->render('books/create');
 	}
 
 	public function admin()
