@@ -9,6 +9,7 @@ class MY_Controller extends CI_Controller
   {
     parent::__construct();
     $this->data['pagetitle'] = 'My First CMS';
+    $this->current_datetime = date('Y-m-d H:i:s');
   }
 
   protected function render($the_view = NULL, $template = 'backend')
@@ -20,6 +21,7 @@ class MY_Controller extends CI_Controller
       }
       elseif(is_null($template))
       {
+          
           $this->load->view($the_view,$this->data);
       }
       else
