@@ -1,6 +1,6 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Auth extends CI_Controller {
+class Auth extends MY_Controller {
 
 	function __construct()
 	{
@@ -40,7 +40,8 @@ class Auth extends CI_Controller {
 				$this->data['users'][$k]->groups = $this->ion_auth->get_users_groups($user->id)->result();
 			}
 
-			$this->_render_page('auth/index', $this->data);
+			//$this->_render_page('auth/index', $this->data);
+			$this->render('auth/index');
 		}
 	}
 
@@ -384,7 +385,8 @@ class Auth extends CI_Controller {
 			$this->data['csrf'] = $this->_get_csrf_nonce();
 			$this->data['user'] = $this->ion_auth->user($id)->row();
 
-			$this->_render_page('auth/deactivate_user', $this->data);
+			// $this->_render_page('auth/deactivate_user', $this->data);
+			$this->render('auth/deactivate_user');
 		}
 		else
 		{
@@ -515,7 +517,8 @@ class Auth extends CI_Controller {
                 'value' => $this->form_validation->set_value('password_confirm'),
             );
 
-            $this->_render_page('auth/create_user', $this->data);
+            // $this->_render_page('auth/create_user', $this->data);
+            $this->render('auth/create_user');
         }
     }
 
@@ -667,7 +670,8 @@ class Auth extends CI_Controller {
 			'type' => 'password'
 		);
 
-		$this->_render_page('auth/edit_user', $this->data);
+		// $this->_render_page('auth/edit_user', $this->data);
+		$this->render('auth/edit_user');
 	}
 
 	// create a new group
@@ -713,7 +717,8 @@ class Auth extends CI_Controller {
 				'value' => $this->form_validation->set_value('description'),
 			);
 
-			$this->_render_page('auth/create_group', $this->data);
+			// $this->_render_page('auth/create_group', $this->data);
+			$this->render('auth/create_group');
 		}
 	}
 
@@ -778,7 +783,8 @@ class Auth extends CI_Controller {
 			'value' => $this->form_validation->set_value('group_description', $group->description),
 		);
 
-		$this->_render_page('auth/edit_group', $this->data);
+		// $this->_render_page('auth/edit_group', $this->data);
+		$this->render('auth/edit_group');
 	}
 
 

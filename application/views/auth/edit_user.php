@@ -5,35 +5,35 @@
 
 <?php echo form_open(uri_string());?>
 
-      <p>
+      <div class="form-group">
             <?php echo lang('edit_user_fname_label', 'first_name');?> <br />
-            <?php echo form_input($first_name);?>
-      </p>
+            <?php echo form_input($first_name,'','class="form-control"');?>
+      </div>
 
-      <p>
+      <div class="form-group">
             <?php echo lang('edit_user_lname_label', 'last_name');?> <br />
-            <?php echo form_input($last_name);?>
-      </p>
+            <?php echo form_input($last_name,'','class="form-control"');?>
+      </div>
 
-      <p>
+      <div class="form-group">
             <?php echo lang('edit_user_company_label', 'company');?> <br />
-            <?php echo form_input($company);?>
-      </p>
+            <?php echo form_input($company,'','class="form-control"');?>
+      </div>
 
-      <p>
+      <div class="form-group">
             <?php echo lang('edit_user_phone_label', 'phone');?> <br />
-            <?php echo form_input($phone);?>
-      </p>
+            <?php echo form_input($phone,'','class="form-control"');?>
+      </div>
 
-      <p>
+      <div class="form-group">
             <?php echo lang('edit_user_password_label', 'password');?> <br />
-            <?php echo form_input($password);?>
-      </p>
+            <?php echo form_input($password,'','class="form-control"');?>
+      </div>
 
-      <p>
+      <div class="form-group">
             <?php echo lang('edit_user_password_confirm_label', 'password_confirm');?><br />
-            <?php echo form_input($password_confirm);?>
-      </p>
+            <?php echo form_input($password_confirm,'','class="form-control"');?>
+      </div>
 
       <?php if ($this->ion_auth->is_admin()): ?>
 
@@ -61,6 +61,6 @@
       <?php echo form_hidden('id', $user->id);?>
       <?php echo form_hidden($csrf); ?>
 
-      <p><?php echo form_submit('submit', lang('edit_user_submit_btn'));?></p>
+      <p><?php echo form_submit('submit', lang('edit_user_submit_btn'), 'class="btn btn-primary"');?></p>
 
 <?php echo form_close();?>
