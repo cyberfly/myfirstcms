@@ -1,5 +1,5 @@
 ###################
-What is MYFIRSTCMS
+What is MYFIRSTCMS LAST DAY TRAINING SOURCE CODE
 ###################
 
 MYFIRSTCMS is a starter for CodeIgniter 3 base project. This starter already integrated with Bootstrap 3, jQuery, MY Mode, MY Controller and ION Auth.
